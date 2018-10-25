@@ -1,0 +1,17 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\app",
+    "\\app\\main",
+    "\\app\\main\\.ipynb_checkpoints",
+    "\\app\\static",
+    "\\app\\static\\css",
+    "\\app\\static\\js",
+    "\\app\\templates",
+    "\\tests",
+    "\\virtual",
+    "\\virtual\\bin"
+  ],
+  "SelectedNode": "\\config.py",
+  "PreviewInSolutionExplorer": false
+}

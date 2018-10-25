@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<body>
+    <div class="hero is-grey">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    Basic Calculator
+                </h1>
+                <h3 class="subtitle">
+                    a simple python application for debugging lesson
+                </h3>
+            </div>
+        </div>
+    </div>
+    <section class="block columns">
+        <div class="column"></div>
+        <div class="container column">
+            <div class="columns is-2 field">
+                <form action="" method="POST">
+                    <legend>Calculator</legend>
+                    {{ form.csrf_token }}
+                    <div class="control">
+                        {% if error %}
+                        {{ form.num1.label(class='control label') }}
+                        {{ form.num1(class='control input') }}
+                        <span class="alert alert-warning">{{ error }}</span>
+                        {% else %}
+                        {{ form.num1.label(class='control label') }}
+                        {{ form.num1(class='control input') }}
+                        {% endif %}
+                    </div>
+                    <div class="control">
+                        {{ form.operator.label(class='control label') }}
+                        {{ form.operator(class='control input') }}
+                    </div>
+                    <div class="control">
+                        {{ form.num2.label(class='control label') }}
+                        {{ form.num2(class='control input') }}
+                    </div>
+                    <div class="control">
+                        {{ form.submit(class='control button is-success label') }}
+                    </div>
+                    <div class="block">
+                        <label class="label is-success" for="">Answer: <span class="button is-light">{{ answer }}</span></label>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        <div class="column"></div>
+    </section>
+</body>
+
+</html>
+{% endblock content %}
